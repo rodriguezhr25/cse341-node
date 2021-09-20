@@ -41,14 +41,11 @@ const requesteHandler = (req, res) => {
         });
         res.statusCode = 302;
         res.setHeader('Location' , '/');
+        return res.end();
     }
    
-    res.setHeader('Content-Type', 'text/html');
-    res.write('<html>');
-    res.write('<head><title>My first Page</title></head>');
-    res.write('<body><h1>Hello from my Node.js</h1></body>');
-    res.write('</html>');
-    res.end();
+
+
 }
 
  module.exports = {
